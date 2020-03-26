@@ -35,7 +35,7 @@
 define void @simple_seh() #0 personality i8* bitcast (i32 (...)* @__C_specific_handler to i8*) {
 entry:
 ; CHECK-LABEL: simple_seh
-; CHECK: add     x29, sp, #
+; CHECK: add     x29, sp, #16
 ; CHECK: mov     x0, #-2
 ; CHECK: stur    x0, [x29, #16]
 ; CHECK: .set .Lsimple_seh$frame_escape_0, -8
